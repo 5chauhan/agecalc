@@ -1,43 +1,22 @@
-
-    var calculate = document.getElementById('calculate'),
-  calculateAge = document.getElementById('calculateAge');
-
-  calculate.addEventListener('click',function(){
-    var birthDate = document.getElementById('birth_date').value;
-    birthDate = new Date(birthDate);
-    todayDate = new Date()
-    totalAge = Date.now() - birthDate.getTime();
-    ageYear = new Date(totalAge);
-    ageYear = Math.abs(ageYear.getUTCFullYear() - 1970 );
-    
-    function ageMonth() {
-      if(todayDate.getMonth() >= birthDate.getMonth()) {
-          if(todayDate.getDate() >= birthDate.getDate()) {
-              return todayDate.getMonth() - birthDate.getMonth();
-          }
-          else {
-              if((todayDate.getMonth() - 1) >= birthDate.getMonth()) {
-                  return (todayDate.getMonth() - 1) - birthDate.getMonth();
-              }
-              else {
-                  return ((todayDate.getMonth() - 1) + 12) - birthDate.getMonth();
-              }
-          }
-      }
-        
-    };
-    function ageDay() {
-        if(todayDate.getDate() > birthDate.getDate()) {
-            return todayDate.getDate() - birthDate.getDate();
-        }
-        else if(todayDate.getDate() == birthDate.getDate()) {
-            return todayDate.getDate() - birthDate.getDate();
-        }
-        else {
-            let calDate = new Date(birthDate.getFullYear(), birthDate.getMonth(), 0);
-            return (todayDate.getDate() + calDate.getDate()) - birthDate.getDate();
-        }
-    };
-    calculateAge.innerHTML = "Your Age "+ageYear+" Years "+ageMonth()+ " Months "+ageDay()+" Days"
-
-  });
+function age() {  
+    var d1 = document.getElementById('date').value;  
+    var m1 = document.getElementById('month').value;  
+    var y1 = document.getElementById('year').value;  
+    var date = new Date();  
+    var d2 = date.getDate();  
+    var m2 = 1 + date.getMonth();  
+    var y2 = date.getFullYear();  
+    var month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];  
+    if(d1 > d2){  
+     d2 = d2 + month[m2 - 1];  
+     m2 = m2 - 1;  
+    }  
+    if(m1 > m2){  
+     m2 = m2 + 12;  
+     y2 = y2 - 1;  
+    }  
+    var d = d2 - d1;  
+    var m = m2 - m1;  
+    var y = y2 - y1;  
+    document.getElementById('age').innerHTML = 'Your Age is '+y+' Years '+m+' Months '+d+' Days';  
+   }  
