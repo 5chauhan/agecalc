@@ -103,7 +103,7 @@ body{
 	color: rgb(38, 64, 122);  
    } 
 .background{
-	background repeat - no repeat;
-	background position - center;
-	background size - cover;
+	background repeat: no repeat;
+	background position: center;
+	background size: cover;
 }
