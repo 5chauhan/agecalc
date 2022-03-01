@@ -8,9 +8,9 @@ body{
    }  
    * {  
 	box-sizing: border-box;  
-   }  
+     }  
    .container{  
-	width:520px;  
+	width:700px;  
 	height: auto;  
 	margin: 100px auto;  
 	background-color: #eee;  
@@ -19,9 +19,11 @@ body{
    .base{  
 	width: 100%;  
 	margin: 0;  
-	overflow: hidden;  
+	overflow: hidden; 
+	border: 3px solid #66666a;
 	display: block;  
-	float: none;  
+	float: none; 
+	background-color: yellow;
    }  
    .block{  
 	width: 135px;  
@@ -34,11 +36,12 @@ body{
 	font-size: 26px;  
 	text-align: center;  
 	font-family: sans-serif;  
-	font-weight: normal;  
+	font-weight: bolder;  
 	margin-top: 0px;  
 	box-shadow: 0px 2px #bababa;  
 	background: white;  
 	font-size: 34px;  
+	   border: 10px solid darkolivegreen;
 	color: rgb(12, 12, 34);  
    }  
    .title{  
@@ -50,7 +53,7 @@ body{
 	letter-spacing: 0.5px;  
 	word-spacing: 2.7px;  
 	color: #10304e;  
-   }  
+     }  
    input[type=text] {  
 	width: 140px;  
 	margin: auto;  
@@ -59,9 +62,9 @@ body{
 	border: 2px solid #0d3153;  
 	padding: 12px;  
 	background-color: #f7f7f7;  
-	 border-radius: 2px;  
-	 color: #132c44;  
-	 font-size: 17px;  
+	border-radius: 2px;  
+	color: #132c44;  
+	font-size: 17px;  
    }  
    input[type=text]:focus{  
 	background-color: #ffffff;  
@@ -69,13 +72,13 @@ body{
 	outline: none;  
    }  
    input[type=button]{  
-	width: 150px;  
+	width: 150px;    
 	margin-left: 35%;  
 	margin-top: 40px;  
 	outline: none;  
-	border: none;  
-	border-radius: 2px;  
-	background-color: #0761b6;  
+	border: 4px solid #050552;  
+	/*border-radius: 8px;*/
+	background-color: #04e7ca4;  
 	color: #ffffff;  
 	padding: 14px 16px;  
 	text-align: center;  
@@ -85,7 +88,7 @@ body{
 	background-color: #1a1b1d;  
    }  
    #age{  
-	display: block;  
+	display: block;   
 	margin: 10px;  
 	margin-top: 35px;  
 	padding: 10px;  
@@ -93,8 +96,9 @@ body{
 	overflow: hidden;  
 	font-family: verdana;  
 	font-size: 23px;  
-	font-weight: normal;  
+	font-weight: bold; 
+        background-color : blue;
 	line-height: 1.5;  
 	word-spacing: 2.7px;  
-	color: rgb(72, 72, 177);  
+	color: rgb(38, 64, 122);  
    } 
